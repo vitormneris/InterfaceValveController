@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente MQTT</title>
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main">
+        <h1 class="title is-1">Valve controller</h1>
+        <h2 class="title is-3">Monitoramento Inteligente de Nível de Água</h2>
+
+        <p> Bem-vindo ao sistema de monitoramento e controle de nível de água com ESP32! Este projeto foi desenvolvido para automatizar o gerenciamento do nível de água em um reservatório, proporcionando uma solução eficiente para evitar transbordamentos e desperdícios.</p>
+        <p> Na interface, você pode acompanhar a distância atual entre o sensor e a superfície da água, refletindo o nível do reservatório. Além disso, é possível visualizar o estado da válvula de controle: aberta (permitindo a entrada de água) ou fechada (interrompendo o fluxo). Esse monitoramento contínuo garante que o reservatório seja preenchido de forma segura e automatizada.</p>
+        <p> Explore e acompanhe as leituras em tempo real para uma gestão prática e inteligente dos recursos hídricos! </p>
+        <div class="card">
+            <h2 class="subtitle is-4">Informação do Nível da água</h2>
+            <pre id="messageDistancia"></pre>
+            <br>
+            <h2 class="subtitle is-4">Status da valvula</h2>
+            <pre id="messageStatus"></pre>
+        </div>
+        <button id="closeButton" class="button">Desativar valvula</button>
+        <button id="openButton" class="button">Ativar valvula</button>
+        <script src="connection.js"></script>
+    </main>
+</body>
+</html>
